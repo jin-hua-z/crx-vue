@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "nav",
+    "description": "一款开发人员定制的浏览器导航",
+    "version": "0.0.1",
+    "options_page": "options.html",
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+}
