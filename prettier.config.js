@@ -1,10 +1,9 @@
 module.exports = {
-  singleQuote: false, // 使用单引号
   semi: true, // 末尾使用分号
   arrowParens: "avoid", // (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号 always不省略
   bracketSpacing: true,
   trailingComma: "es5",
-  printWidth: 100, // 超过最大值换行
+  printWidth: 80, // 超过最大值换行
   tabWidth: 2, // 缩进字节数
   useTabs: false, // 缩进不使用tab，使用空格
   proseWrap: "preserve", // 默认值。因为使用了一些折行敏感型的渲染器（如GitHub comment）而按照markdown文本样式进行折行
@@ -14,4 +13,12 @@ module.exports = {
   jsxBracketSameLine: false, // 在jsx中把'>' 是否单独放一行
   jsxSingleQuote: false, // 在jsx中使用单引号代替双引号
   requireConfig: false, // Require a 'prettierconfig' to format prettier
+  eslintIntegration: true,
+  extends: ["prettier"],
+  plugins: ["prettier"],
+  rules: {
+    "prettier/prettier": ["error", { singleQuote: true, parser: "flow" }],
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+  },
 };

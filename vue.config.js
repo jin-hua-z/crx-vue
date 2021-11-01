@@ -6,7 +6,7 @@ const pagesObj = {};
 
 const chromeName = ["popup", "options", "content"];
 
-chromeName.forEach((name) => {
+chromeName.forEach(name => {
   pagesObj[name] = {
     entry: `src/${name}/index.js`,
     template: "public/index.html",
@@ -36,6 +36,8 @@ module.exports = {
     resolve: {
       alias: {
         components: "@/components",
+        assets: "@/assets",
+        utils: "@/utils",
       },
     },
   },
