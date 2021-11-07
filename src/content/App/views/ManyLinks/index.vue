@@ -12,14 +12,17 @@
         <span class="item-content">{{ item.label }}</span>
       </div>
     </div>
+    <DrawerPanel :drawer.sync="show" v-if="whatType == 'open'" :src="showSrc" />
   </div>
 </template>
 
 <script>
 import logo from "assets/images/logo.png";
+import DrawerPanel from "../DrawerPanel";
 import { addSub } from "utils";
 
 export default {
+  components: { DrawerPanel },
   props: {
     title: {
       type: String,
@@ -29,15 +32,28 @@ export default {
       type: Array,
       default: () => [],
     },
+    whatType: {
+      type: String,
+      default: "link",
+    },
   },
   data() {
     return {
       logo,
+      show: false,
+      showSrc: "",
     };
   },
   methods: {
     handleClick(item) {
-      item.link && window.open(addSub(item.link));
+      if (item.link && this.whatType === "link") {
+        window.open(addSub(item.link));
+      }
+
+      if (this.whatType === "open") {
+        this.showSrc = item.link;
+        this.show = true;
+      }
     },
   },
 };

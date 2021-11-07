@@ -1,5 +1,7 @@
 <template>
-  <div class="custom-header-nav align-items jus font-20 w-600">常用导航</div>
+  <div class="custom-header-nav align-items jus font-20 w-600">
+    <slot></slot>
+  </div>
 </template>
 
 <script>

@@ -91,3 +91,22 @@ export const studyList = [
     id: 2,
   },
 ];
+
+// 工具
+export const toolsList = [
+  {
+    label: "在线JSON",
+    link: "https://www.json.cn/",
+    id: 1,
+  },
+  {
+    label: "在线正则",
+    link: "https://c.runoob.com/front-end/854/",
+    id: 2,
+  },
+  {
+    label: "在线时间戳",
+    link: "https://tool.lu/timestamp/",
+    id: 3,
+  },
+];

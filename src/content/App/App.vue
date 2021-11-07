@@ -1,14 +1,23 @@
 <template>
   <div class="main-app">
     <el-container>
-      <el-header><HeaderNav /></el-header>
+      <el-header>
+        <HeaderNav>
+          <div class="jus">
+            <div class="search-box"><SearchBar /></div>
+          </div>
+        </HeaderNav>
+      </el-header>
       <el-main>
-        <div class="jus">
-          <div class="search-box"><SearchBar /></div>
-        </div>
-        <ManyLinks :linksList="workList" key="1" />
-        <ManyLinks :linksList="feList" key="2" />
-        <ManyLinks :linksList="studyList" key="3" />
+        <ManyLinks :linksList="workList" key="1" title="快速工作" />
+        <ManyLinks :linksList="feList" key="2" title="前端" />
+        <ManyLinks :linksList="studyList" key="3" title="技术" />
+        <ManyLinks
+          :linksList="toolsList"
+          key="4"
+          title="在线工具"
+          whatType="open"
+        />
       </el-main>
     </el-container>
   </div>
@@ -19,7 +28,7 @@ import HeaderNav from "@/components/HeaderNav";
 import SearchBar from "./views/SearchBar";
 import ManyLinks from "./views/ManyLinks";
 import logo from "assets/images/logo.png";
-import { feList, studyList, workList } from "utils";
+import { feList, studyList, workList, toolsList } from "utils";
 export default {
   name: "app",
   components: {
@@ -37,9 +46,12 @@ export default {
       feList: feList,
       studyList: studyList,
       workList,
+      toolsList,
     };
   },
-  mounted() {},
+  mounted() {
+    console.log("1234567ytrertytrewertytrewqwerty");
+  },
 };
 </script>
 

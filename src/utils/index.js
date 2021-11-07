@@ -1,3 +1,9 @@
-export { platformList, feList, studyList, workList } from "./static.js";
+export {
+  platformList,
+  feList,
+  studyList,
+  workList,
+  toolsList,
+} from "./static.js";
 
 export { addSub } from "./addSub";
