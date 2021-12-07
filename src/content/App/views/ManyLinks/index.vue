@@ -8,7 +8,10 @@
         :key="item.id"
         @click="handleClick(item)"
       >
-        <img :src="logo" alt="" class="item-pic" />
+        <svg class="icon item-pic" aria-hidden="true">
+          <use :xlink:href="item.icon"></use>
+        </svg>
+        <!-- <img :src="logo" alt="" class="item-pic" /> -->
         <span class="item-content">{{ item.label }}</span>
       </div>
     </div>
