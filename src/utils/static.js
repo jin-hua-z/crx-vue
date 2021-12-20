@@ -20,6 +20,11 @@ export const platformList = [
     value: "4",
     link: "https://github.com/search?q=",
   },
+  {
+    label: "掘金",
+    value: "5",
+    link: "https://juejin.cn/search?query=",
+  },
 ];
 // 工作
 export const workList = [
