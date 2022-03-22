@@ -25,6 +25,11 @@ export const platformList = [
     value: "5",
     link: "https://juejin.cn/search?query=",
   },
+  {
+    label: "谷歌翻译",
+    value: "6",
+    link: "https://translate.google.com/?sl=auto&tl=zh-CN&op=translate&text=",
+  },
 ];
 // 工作
 export const workList = [
@@ -102,10 +107,16 @@ export const studyList = [
     icon: "#icon-gongxiangqiche",
   },
   {
-    label: "csdn",
-    link: "https://www.csdn.net/",
+    label: "51cto",
+    link: "https://www.51cto.com/",
     id: 2,
     icon: "#icon-a-kechegongjiaoche",
+  },
+  {
+    label: "博客园",
+    link: "https://www.cnblogs.com/",
+    id: 3,
+    icon: "#icon-qianzuocechemendakai",
   },
 ];
 
@@ -132,7 +143,13 @@ export const toolsList = [
   {
     label: "在线urlencode",
     link: "http://www.jsons.cn/urlencode/",
-    id: 3,
+    id: 4,
     icon: "#icon-honglvdeng",
   },
+  // {
+  //   label: "在线谷歌翻译",
+  //   link: "https://translate.google.com/?sl=auto&tl=zh-CN&text=true&op=translate",
+  //   id: 5,
+  //   icon: "#icon-gaotie",
+  // },
 ];
